@@ -5,4 +5,6 @@ class Book < ApplicationRecord
   validates :summary, presence: true
   validates :price, presence: true
   validates :published_date, presence: true
+
+  has_many_attached :images
 end

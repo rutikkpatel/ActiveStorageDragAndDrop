@@ -25,5 +25,14 @@
         <%= button_to "View all Book", books_path,method: :get ,class:"btn-primary border-0 rounded-pill shadow p-2 m-2" %>
       </div>
     </div>
+    <div class="d-flex">
+      <% @book.images.each do |img| %>
+        <div class="card text-center me-3">
+          <div class="card-body">
+            <%= image_tag img %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

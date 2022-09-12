@@ -37,6 +37,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    @book = Book.find(params[:id])
     @book.destroy
     redirect_to books_path, notice: "Book has been successfully destroyed."
   end
@@ -48,6 +49,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:book_name, :genre, :author_name, :summary, :price, :published_date)
+    params.require(:book).permit(:book_name, :genre, :author_name, :summary, :price, :published_date, images: [])
   end
 end

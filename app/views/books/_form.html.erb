@@ -31,6 +31,10 @@
         <%= f.label :published_date, "Published Date :" %>
         <%= f.date_field :published_date, class:"mb-2 form-control" %>
         <br>
+        <br>
+        <%= f.label :images, "Images :" %>
+        <%= f.drag_and_drop_file_field :images, 'Drag and drop images here!' %>
+        <br>
         <div class="d-flex justify-content-center">
           <%= f.submit "Save Book", class:"btn-secondary border-0 shadow py-2 px-5" %>
         </div>
